@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 22 18:20:49 2023
+
+@author: tjorven
+"""
+import math
+print("Form: a*x^2+b*x+k=0")
+print ("was ist a ?")
+a = int(input())
+print ("was ist b? ")
+
+b = int(input())
+b = b/a
+print("Was ist k?  ")
+
+k = int(input()) 
+k = k /a
+ans1 = 0
+ans2 = 0
+helper1 = -b/2
+helper= (b/2)*(b/2) -k
+if helper < 0:
+    print("Die Funktion hat keinen schnitpunkt mit der x-Achse")
+    
+elif  helper == 0:
+    print("Die Funktion hat einen schnitpunkt mit der x-Achse: "+str(helper1))
+elif helper > 0:
+    h = math.sqrt(helper)
+    ans1 = helper1-h
+    ans2 = helper1+h
+    print("Die Funktion hat zwei schnitpunkt mit der x-Achse:"+str(ans1)+" , "+ str(ans2))
+
